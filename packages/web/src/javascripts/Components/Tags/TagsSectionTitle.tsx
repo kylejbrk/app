@@ -22,7 +22,7 @@ const TagsSectionTitle: FunctionComponent<Props> = ({ features, hasMigration, on
   if (entitledToFolders) {
     return (
       <>
-        <div className="sk-h3 title">
+        <div className="text-sm overflow-hidden overflow-ellipsis whitespace-nowrap">
           <span className="sk-bold">Folders</span>
           {hasMigration && (
             <label className="ml-1 sk-bold color-info cursor-pointer" onClick={onClickMigration}>
@@ -36,10 +36,10 @@ const TagsSectionTitle: FunctionComponent<Props> = ({ features, hasMigration, on
 
   return (
     <>
-      <div className="sk-h3 title">
+      <div className="text-sm overflow-hidden overflow-ellipsis whitespace-nowrap">
         <span className="sk-bold">Tags</span>
         <Tooltip label={TAG_FOLDERS_FEATURE_TOOLTIP}>
-          <label className="ml-1 sk-bold color-passive-2 cursor-pointer" onClick={showPremiumAlert}>
+          <label className="ml-1 font-bold color-passive-2 cursor-pointer" onClick={showPremiumAlert}>
             Folders
           </label>
         </Tooltip>
