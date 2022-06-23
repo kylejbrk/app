@@ -65,7 +65,7 @@ const Navigation: FunctionComponent<Props> = ({ application }) => {
       {ref && (
         <PanelResizer
           collapsable={true}
-          defaultWidth={150}
+          defaultWidth={220}
           panel={ref}
           hoverable={true}
           side={PanelSide.Right}

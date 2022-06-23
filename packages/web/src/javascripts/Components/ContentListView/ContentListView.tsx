@@ -275,7 +275,7 @@ const ContentListView: FunctionComponent<Props> = ({
         <PanelResizer
           collapsable={true}
           hoverable={true}
-          defaultWidth={300}
+          defaultWidth={350}
           panel={itemsViewPanelRef.current}
           side={PanelSide.Right}
           type={PanelResizeType.WidthOnly}
