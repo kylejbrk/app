@@ -20,15 +20,6 @@ $content-horizontal-padding: 16px;
     background-color: var(--navigation-column-background-color);
   }
 
-  .section-title-bar {
-    color: var(--navigation-section-title-color);
-    padding-top: 0.8125rem;
-    padding-bottom: 8px;
-    padding-left: $content-horizontal-padding;
-    padding-right: $content-horizontal-padding;
-    font-size: 12px;
-  }
-
   .no-tags-placeholder {
     padding: 0px $content-horizontal-padding;
     font-size: 12px;

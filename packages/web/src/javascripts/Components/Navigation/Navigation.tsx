@@ -50,7 +50,7 @@ const Navigation: FunctionComponent<Props> = ({ application }) => {
       ref={setRef}
     >
       <div id="navigation-content" className="content">
-        <div className="section-title-bar">
+        <div className="color-text px-4 pt-3 pb-1">
           <div className="flex justify-between items-center">
             <div className="text-sm overflow-hidden overflow-ellipsis whitespace-nowrap">
               <span className="font-bold">Views</span>

@@ -53,7 +53,7 @@ const TagsSection: FunctionComponent<Props> = ({ viewControllerManager }) => {
 
   return (
     <section>
-      <div className="section-title-bar">
+      <div className="color-text px-4 pt-3 pb-1">
         <div className="flex justify-between items-center">
           <TagsSectionTitle
             features={viewControllerManager.featuresController}
