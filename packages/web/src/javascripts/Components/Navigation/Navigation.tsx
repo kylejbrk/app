@@ -6,12 +6,15 @@ import { ApplicationEvent, PrefKey } from '@standardnotes/snjs'
 import { observer } from 'mobx-react-lite'
 import { FunctionComponent, useCallback, useEffect, useMemo, useState } from 'react'
 import PanelResizer, { PanelSide, ResizeFinishCallback, PanelResizeType } from '@/Components/PanelResizer/PanelResizer'
+import { ItemListController } from '@/Controllers/ItemList/ItemListController'
+import SearchBar from './SearchBar'
 
 type Props = {
   application: WebApplication
+  itemListController: ItemListController
 }
 
-const Navigation: FunctionComponent<Props> = ({ application }) => {
+const Navigation: FunctionComponent<Props> = ({ application, itemListController }) => {
   const viewControllerManager = useMemo(() => application.getViewControllerManager(), [application])
   const [ref, setRef] = useState<HTMLDivElement | null>()
   const [panelWidth, setPanelWidth] = useState<number>(0)
@@ -50,6 +53,9 @@ const Navigation: FunctionComponent<Props> = ({ application }) => {
       ref={setRef}
     >
       <div id="navigation-content" className="content">
+        <div className="px-4 pt-3 pb-1.5">
+          <SearchBar itemListController={itemListController} />
+        </div>
         <div className="color-text px-4 pt-3 pb-1">
           <div className="flex justify-between items-center">
             <div className="text-sm overflow-hidden overflow-ellipsis whitespace-nowrap">
