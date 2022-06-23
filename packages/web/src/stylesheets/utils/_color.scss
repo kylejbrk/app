@@ -84,3 +84,7 @@
 .color-danger-contrast {
   color: var(--sn-stylekit-danger-contrast-color);
 }
+
+.placeholder\:color-passive-0::placeholder, .placeholder\:color-passive-0 *::placeholder {
+  color: var(--sn-stylekit-passive-color-0)
+}
