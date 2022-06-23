@@ -40,10 +40,10 @@ type State = {
 }
 
 const StyledPanelResizer = styled.div<{
-  hoverable?: boolean
-  alwaysVisible?: boolean
-  pressed: boolean
-  collapsed: boolean
+  $hoverable?: boolean
+  $alwaysVisible?: boolean
+  $pressed: boolean
+  $collapsed: boolean
 }>`
   background-color: var(--panel-resizer-background-color);
   border-bottom: none;
@@ -76,10 +76,10 @@ const StyledPanelResizer = styled.div<{
     right: none;
   }
 
-  ${(props) => (props.alwaysVisible || props.collapsed || props.pressed) && 'opacity: 1;'}
+  ${(props) => (props.$alwaysVisible || props.$collapsed || props.$pressed) && 'opacity: 1;'}
 
   &:hover {
-    ${(props) => props.hoverable && 'opacity: 1;'}
+    ${(props) => props.$hoverable && 'opacity: 1;'}
   }
 `
 
@@ -352,10 +352,10 @@ class PanelResizer extends Component<Props, State> {
   override render() {
     return (
       <StyledPanelResizer
-        hoverable={this.props.hoverable}
-        alwaysVisible={this.props.alwaysVisible}
-        pressed={this.state.pressed}
-        collapsed={this.state.collapsed}
+        $hoverable={this.props.hoverable}
+        $alwaysVisible={this.props.alwaysVisible}
+        $pressed={this.state.pressed}
+        $collapsed={this.state.collapsed}
         className={this.props.side}
         onMouseDown={this.onMouseDown}
         ref={this.resizerElementRef}
