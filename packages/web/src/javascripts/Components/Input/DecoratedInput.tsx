@@ -19,17 +19,20 @@ const getClassNames = (hasLeftDecorations: boolean, hasRightDecorations: boolean
 const DecoratedInput = forwardRef(
   (
     {
-      type = 'text',
+      autocomplete = false,
       className = '',
       disabled = false,
       left,
-      right,
-      value,
-      placeholder = '',
+      onBlur,
       onChange,
       onFocus,
       onKeyDown,
-      autocomplete = false,
+      onKeyUp,
+      placeholder = '',
+      right,
+      type = 'text',
+      title,
+      value,
     }: DecoratedInputProps,
     ref: Ref<HTMLInputElement>,
   ) => {
@@ -48,17 +51,20 @@ const DecoratedInput = forwardRef(
         )}
 
         <input
-          type={type}
+          autoComplete={autocomplete ? 'on' : 'off'}
           className={`${classNames.input} ${disabled ? classNames.disabled : ''}`}
+          data-lpignore={type !== 'password' ? true : false}
           disabled={disabled}
-          value={value}
-          placeholder={placeholder}
+          onBlur={onBlur}
           onChange={(e) => onChange && onChange((e.target as HTMLInputElement).value)}
           onFocus={onFocus}
           onKeyDown={onKeyDown}
-          data-lpignore={type !== 'password' ? true : false}
-          autoComplete={autocomplete ? 'on' : 'off'}
+          onKeyUp={onKeyUp}
+          placeholder={placeholder}
           ref={ref}
+          title={title}
+          type={type}
+          value={value}
         />
 
         {right && (
