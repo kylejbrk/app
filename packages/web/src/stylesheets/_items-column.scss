@@ -25,23 +25,6 @@
     flex-direction: column;
   }
 
-  #items-title-bar-container {
-    padding: 0.8125rem;
-  }
-
-  #items-title-bar {
-    font-weight: normal;
-    overflow: visible;
-
-    .section-title-bar-header .title {
-      width: calc(90% - 45px);
-    }
-
-    p {
-      font-size: var(--sn-stylekit-font-size-p);
-    }
-  }
-
   #items-menu-bar {
     position: relative;
   }
@@ -120,7 +103,8 @@
   }
 
   .content-list-item {
-    &.selected, &:hover {
+    &.selected,
+    &:hover {
       background-color: var(--item-cell-selected-background-color);
     }
 

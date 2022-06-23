@@ -212,7 +212,7 @@ const ContentListView: FunctionComponent<Props> = ({
     >
       <div className="content">
         <div id="items-title-bar" className="section-title-bar">
-          <div id="items-title-bar-container">
+          <div id="items-title-bar-container" className="p-3.5">
             <ContentListHeader
               application={application}
               panelTitle={panelTitle}

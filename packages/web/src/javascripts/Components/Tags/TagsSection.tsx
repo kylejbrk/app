@@ -54,7 +54,7 @@ const TagsSection: FunctionComponent<Props> = ({ viewControllerManager }) => {
   return (
     <section>
       <div className="section-title-bar">
-        <div className="section-title-bar-header">
+        <div className="flex justify-between items-center">
           <TagsSectionTitle
             features={viewControllerManager.featuresController}
             hasMigration={hasMigration}

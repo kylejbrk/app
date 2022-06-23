@@ -45,7 +45,7 @@ const ContentListHeader = ({
   }, [])
 
   return (
-    <div className="section-title-bar-header">
+    <div className="flex justify-between items-center">
       <div className="flex flex-col">
         <div className="text-lg font-semibold title">{panelTitle}</div>
         {optionsSubtitle && <div className="text-xs color-passive-0">{optionsSubtitle}</div>}
