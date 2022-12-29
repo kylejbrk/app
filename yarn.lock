@@ -6992,7 +6992,7 @@ __metadata:
     npm-check-updates: "*"
     pod-install: ^0.1.33
     prettier: ^2.6.0
-    prettier-plugin-organize-imports: ^2.3.4
+    prettier-plugin-organize-imports: ^3.2.1
     react: 17.0.2
     react-devtools: ^4.24.6
     react-devtools-core: ^4.24.6
@@ -30996,13 +30996,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-organize-imports@npm:^2.3.4":
-  version: 2.3.4
-  resolution: "prettier-plugin-organize-imports@npm:2.3.4"
+"prettier-plugin-organize-imports@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "prettier-plugin-organize-imports@npm:3.2.1"
   peerDependencies:
+    "@volar/vue-language-plugin-pug": ^1.0.4
+    "@volar/vue-typescript": ^1.0.4
     prettier: ">=2.0"
     typescript: ">=2.9"
-  checksum: 2298fcae0f16fd1a095cc3a33ba5d51b679b291518d404ad5eaca56fdcfbd55d35e26c5adffcb8664bfb45c2339b551b385cf03f48888c46d0348843d96024e1
+  peerDependenciesMeta:
+    "@volar/vue-language-plugin-pug":
+      optional: true
+    "@volar/vue-typescript":
+      optional: true
+  checksum: 57d0539e26ed6a1f5de6bdf390f8371a5637824bf6bb269d3a50c5c77ed4bdc3cdb97a797243baf6c2d65aa1bbda0b2307e55ab67dc639331c187b8d183bcdaa
   languageName: node
   linkType: hard
 
